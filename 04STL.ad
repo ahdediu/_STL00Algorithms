@@ -1,0 +1,46 @@
+### The Standard Template Library
+(page 194)
+
+From the programmer’s point of view, the STL provides a bunch of collection classes that meet
+various needs, together with several algorithms that operate on them. All components of the STL are
+templates, so they can be used for arbitrary element types. 
+
+To use the appropriate kind of collection, you simply define the appropriate container and
+call the corresponding member functions and algorithms to process the data.
+
+#### STL Components
+
+* **Containers** are used to manage collections of objects of a certain kind. Every kind of container has its own advantages and disadvantages, so having different container types reflects different requirements for collections in programs. The containers may be implemented as arrays or as linked lists, or they may have a special key for every element
+* **Iterators** are used to step through the elements of collections of objects. These collections may be containers or subsets of containers.
+* **Algorithms** are used to process the elements of collections. For example, algorithms can search, sort, modify, or simply use the elements for various purposes. Algorithms use iterators.
+
+Iterators are the glue
+between these two components (Figure 1).
+
+.STL Components
+image::Figures/img.png[STL Components]
+
+
+
+#### Containers
+Container classes, or containers for short, manage a collection of elements. To meet different needs,
+the STL provides different kinds of containers, as shown in Figure 2.
+
+.STL Container Types
+image::Figures/img_1.png[STL COntainers Tyes]
+STL Container Types
+
+There are three kinds of containers:
+
+1. *Sequence containers* are ordered collections in which every element has a certain position. The STL contains five predefined sequence container classes: array, vector, deque, list, and forward_list.
+2. *Associative containers* are sorted collections in which the position of an element depends on its value (or key, if it’s a key/value pair) due to a certain sorting criterion. The STL contains four predefined associative container classes: set, multiset, map, and multimap.
+3. *Unordered containers* are unordered collections in which the position of an element doesn’t matter. The STL contains four predefined unordered container classes: unordered_set, unordered_multiset, unordered_map, and unordered_multimap.
+
+Implementation
+
+* **Sequence** containers are usually implemented as arrays or linked lists.
+* **Associative** containers are usually implemented as binary trees.
+* **Unordered** containers are usually implemented as hash tables.
+
+
+
